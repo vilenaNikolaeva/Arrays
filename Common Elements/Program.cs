@@ -6,21 +6,16 @@ namespace Common_Elements
     {
         static void Main(string[] args)
         {
-            string[] firstArr = Console.ReadLine().Split(" ");
-            string[] secondArr = Console.ReadLine().Split(" ");
-
-            string commonElements = string.Empty;
+            var firstArr = Console.ReadLine().Split(" ").ToArray();
+            var secondArr = Console.ReadLine().Split(" ").ToArray();
 
             for (int i = 0; i < secondArr.Length; i++)
             {
-                string currentSecondElement = secondArr[i];
-                for (int j = 0; j < firstArr.Length; j++)
+                for (int k = 0; k < firstArr.Length; k++)
                 {
-                    string currentFirstElement = firstArr[j];
-                    if (currentFirstElement == currentSecondElement)
+                    if (firstArr[k]==secondArr[i])
                     {
-                        Console.Write
-                            ($"{currentSecondElement+ " "}");
+                        Console.Write(secondArr[i]+ " ");
                     }
                 }
             }
