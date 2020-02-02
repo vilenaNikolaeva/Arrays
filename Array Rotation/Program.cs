@@ -13,7 +13,7 @@ namespace Array_Rotation
             for (int i = 0; i < numRotation; i++)
             {
                 int firstNum = arrey[0];
-                for (int j = 0; j < arrey.Length; j++)
+                for (int j = 0; j < arrey.Length-1; j++)
                 {
                     arrey[j] = arrey[j + 1];
                 }
