@@ -7,16 +7,16 @@ namespace Train
     {
         static void Main(string[] args)
         {
-            int wagons = int.Parse(Console.ReadLine());
-            int[] train=new int [wagons];
+           var lines =int.Parse(Console.ReadLine());
+            var sum = 0;
+            int[] arr = new int[lines];
 
-            for (int i = 0; i < wagons; i++)
+            for (int i = 0; i < lines; i++)
             {
-                int peopleInWagon = int.Parse(Console.ReadLine());
-                train[i] = peopleInWagon;
+                arr[i] = int.Parse(Console.ReadLine());
+                sum += arr[i];
             }
-            int sum = train.Sum();
-            Console.Write(string.Join(" ",train));
+            Console.WriteLine(string.Join(" ",arr));
             Console.WriteLine(sum);
         }
     }
