@@ -7,18 +7,16 @@ namespace Max_Sequence_of_Equal_Elements
     {
         static void Main(string[] args)
         {
-            int[] num = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
-
-        
+             int[] num = Console.ReadLine().Split(" ").Select(int.Parse).ToArray();
             int maxCount = 1;
             int currentCount = 1;
             int number = num[0];
 
-            for (int i = 0; i < num.Length; i++)
+            for (int i = 0; i < num.Length - 1; i++)
             {
-                int previousElement = num[i - 1];
+                int secondElement = num[i + 1];
                 int currentElement = num[i];
-                if (currentElement==previousElement)
+                if (currentElement == secondElement)
                 {
                     currentCount++;
                     if (currentCount > maxCount)
@@ -34,9 +32,8 @@ namespace Max_Sequence_of_Equal_Elements
             }
             for (int i = 0; i < maxCount; i++)
             {
-                Console.WriteLine(number+ " ");
+                Console.Write(number + " ");
             }
-            Console.WriteLine();
         }
     }
 }
